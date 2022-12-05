@@ -12,7 +12,6 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff1fcff),
-      drawer: const Drawer(),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -20,6 +19,7 @@ class HomeView extends GetView<HomeController> {
               "Hey Shubham",
               style: TextStyle(fontSize: 18),
             ),
+            leading: Image.asset('assets/drawer.png'),
             backgroundColor: Colors.transparent,
             expandedHeight: 170,
             flexibleSpace: FlexibleSpaceBar(
