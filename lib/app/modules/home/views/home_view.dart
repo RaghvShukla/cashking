@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff1fcff),
+      backgroundColor: const Color(0xfff1fcff),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -150,11 +150,12 @@ class HomeView extends GetView<HomeController> {
           SliverFillRemaining(
             child: TabBarView(
               controller: controller.tabController,
+              physics: const NeverScrollableScrollPhysics(),
               children: [
-                AllOfferScreen(),
-                GiftsScreen(),
-                UpcomingScreen(),
-                MyOffersScreen(),
+                const AllOfferScreen(),
+                const GiftsScreen(),
+                const UpcomingScreen(),
+                const MyOffersScreen(),
               ],
             ),
           )
@@ -163,57 +164,6 @@ class HomeView extends GetView<HomeController> {
     );
   }
 }
-
-/*
-return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Hey Shubham',
-          style: TextStyle(fontSize: 18),
-        ),
-        actions: [
-          SizedBox(
-            width: 100,
-            height: 37,
-            child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(5),
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)
-                  )
-                ),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 14.5,
-                      child: Icon(
-                        Icons.account_balance_wallet_outlined,
-                        color: Colors.white,
-                        size: 16,
-                      ),
-                      backgroundColor: Color(0xff33C1EF),
-                    ),
-                    SizedBox(width: 9),
-                    Text(
-                      "₹ 452",
-                      style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700, color: Colors.black),
-                    )
-                  ],
-                )),
-          )
-        ],
-      ),
-      body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
- */
 
 class TabContainer extends StatelessWidget {
   const TabContainer({
@@ -251,30 +201,3 @@ class TabContainer extends StatelessWidget {
     );
   }
 }
-
-/*
-List.generate(
-                            4,
-                            (index) => Container(
-                              width: 93,
-                              height: 79,
-                              color: controller.currentIndex.value == index
-                                  ? controller.color.value
-                                  : Colors.white,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.category, color: controller.colorMap[index]),
-                                  const SizedBox(height: 8.6),
-                                  const Text(
-                                    "All Offers",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
- */

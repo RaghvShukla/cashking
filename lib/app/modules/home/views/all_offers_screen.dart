@@ -1,4 +1,6 @@
+import 'package:cashking/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AllOfferScreen extends StatelessWidget {
   const AllOfferScreen({Key? key}) : super(key: key);
@@ -13,8 +15,8 @@ class AllOfferScreen extends StatelessWidget {
           child: Row(
             children: [
               Image.asset('assets/fire.png'),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 "Trending offers",
                 style: TextStyle(
                   fontSize: 16,
@@ -46,7 +48,7 @@ class AllOfferScreen extends StatelessWidget {
                           Container(
                             height: 78,
                             width: 180,
-                            padding: EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(12.0),
                             decoration: const BoxDecoration(
                               color: Color(0xff200114),
                               borderRadius: BorderRadius.only(
@@ -57,11 +59,11 @@ class AllOfferScreen extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   "Alto's Odysseyz",
                                   style: TextStyle(color: Colors.white),
                                 ),
-                                Text(
+                                const Text(
                                   "Get Rs. 230",
                                   style: TextStyle(
                                     color: Colors.white,
@@ -71,7 +73,7 @@ class AllOfferScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Image.asset('assets/instant.png'),
-                                    Text(
+                                    const Text(
                                       "4,687 users",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 10),
@@ -93,8 +95,8 @@ class AllOfferScreen extends StatelessWidget {
           child: Row(
             children: [
               Image.asset('assets/more.png'),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 "More offers",
                 style: TextStyle(
                   fontSize: 16,
@@ -106,8 +108,8 @@ class AllOfferScreen extends StatelessWidget {
         ),
         ListView(
           shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          children: [
+          physics: const NeverScrollableScrollPhysics(),
+          children: const [
             TileList(color: Color(0xff77bb00), imgPath: 'assets/i1.png'),
             TileList(color: Color(0xffaa9ae3), imgPath: 'assets/i2.png'),
             TileList(color: Color(0xff0089ff), imgPath: 'assets/i3.png'),
@@ -132,9 +134,11 @@ class TileList extends StatelessWidget {
       child: SizedBox(
         height: 90,
         child: OutlinedButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(Routes.OFFER_DETAIL);
+          },
           style: OutlinedButton.styleFrom(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             side: BorderSide(width: 2, color: color),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -146,12 +150,12 @@ class TileList extends StatelessWidget {
                 height: 73,
                 width: 73,
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Alto's Odysseyz",
                     style: TextStyle(color: Colors.black),
                   ),
@@ -159,24 +163,24 @@ class TileList extends StatelessWidget {
                     child: OutlinedButton(
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
-                        side: BorderSide(width: 1, color: Color(0xff1185d5)),
+                        side: const BorderSide(width: 1, color: Color(0xff1185d5)),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Get ₹230",
-                        style:
-                            TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w700),
                       ),
                     ),
                   )
                 ],
               ),
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Row(
                   children: [
                     Image.asset('assets/inatant.png'),
-                    Text(
+                    const Text(
                       "  23,567",
                       style: TextStyle(
                         color: Color(0xffff9e0c),
