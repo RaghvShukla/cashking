@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "778624012755",
+    "firebase_url": "https://simpletest-d20ad-default-rtdb.firebaseio.com",
+    "project_id": "simpletest-d20ad",
+    "storage_bucket": "simpletest-d20ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778624012755:android:6ec17c9b42df6d29805f26",
+        "android_client_info": {
+          "package_name": "com.example.cashking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778624012755-or866ujmil6si39qmrv40vulm1c4pgs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs1u0454zR233aDDTwI4kE5IQqJwqAv8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778624012755-or866ujmil6si39qmrv40vulm1c4pgs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778624012755:android:40f97b3225ea3dde805f26",
+        "android_client_info": {
+          "package_name": "com.example.simpletest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778624012755-or866ujmil6si39qmrv40vulm1c4pgs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs1u0454zR233aDDTwI4kE5IQqJwqAv8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778624012755-or866ujmil6si39qmrv40vulm1c4pgs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
